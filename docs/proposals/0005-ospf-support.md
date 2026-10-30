@@ -20,7 +20,7 @@ node `/32` or the node's pod block into OSPF with no BGP session at all.
 `--cluster-as`, `--neighbor-as`, `--ebgp-multihop`, `--graceful-restart`, BFD
 knobs. No IGP surface anywhere in `pkg/speaker/config.go`. FRR is already used
 by the project for EVPN (`VpcEgressGateway`) and by the e2e harness
-(`test/e2e/bgp/frr.go`), and the lab ToR is FRR 9.1 — so an FRR-based
+(`test/e2e/bgp/frr.go`), and the lab ToR is FRR 8.4.4 — so an FRR-based
 implementation is consistent with what already ships.
 
 ## 3. Goals
