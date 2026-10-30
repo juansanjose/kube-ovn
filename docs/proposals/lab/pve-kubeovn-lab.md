@@ -15,7 +15,7 @@ Bridge `vmbr0`, cloud image `/var/lib/vz/template/iso/noble-server-cloudimg-amd6
 | 110 | `kovn-cp1` | k3s server, kube-ovn control plane | 4 / 8 G / 30 G | 192.168.1.110 |
 | 111 | `kovn-w1` | k3s agent | 4 / 8 G / 30 G | 192.168.1.111 |
 | 112 | `kovn-w2` | k3s agent | 4 / 8 G / 30 G | 192.168.1.112 |
-| 113 | `kovn-tor` | FRR 9.1 "ToR" (AS 65100) | 2 / 2 G / 10 G | 192.168.1.113 |
+| 113 | `kovn-tor` | FRR 8.4.4 "ToR" (AS 65100) | 2 / 2 G / 10 G | 192.168.1.113 |
 
 Deliberately untouched: VMs 100-102 (`k8s-cp1`, `k8s-w1`, `k8s-w2`) — a 120-day
 old **calico** cluster with GPU passthrough and `gpu-operator`. Do not install

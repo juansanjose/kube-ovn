@@ -91,7 +91,7 @@ New `pkg/controller/evpn_fabric.go`: watch the three EVPN types plus `BgpConf`,
 
 * **FRR sidecar (phase 1, recommended)** — reuse the egress-gateway pattern: one
   `frr` container in the speaker DaemonSet, config rendered into a ConfigMap and
-  applied via `vtysh -f`. Matches what the lab already runs (FRR 9.1 on the ToR).
+  applied via `vtysh -f`. Matches what the lab already runs (FRR 8.4.4 on the ToR).
 * **GoBGP EVPN (phase 2)** — extends `pkg/speaker` instead of adding a second
   routing stack; GoBGP v4 carries EVPN path types but not MAC-VRF state.
 
@@ -122,7 +122,7 @@ webhook rejections.
 
 **e2e (containerlab)** — `yamls/clab-evpn.yaml.j2`: FRR spine + 2 leaves, one
 kind cluster, two VPCs; assert `show bgp l2vpn evpn route type 2` / `type 5`
-carry the tenant prefixes with the expected RT/RD. Note from the lab: FRR 9.1
+carry the tenant prefixes with the expected RT/RD. Note from the lab: FRR 8.4.4
 needs `no bgp ebgp-requires-policy` or inbound updates are silently discarded
 (`Inbound updates discarded due to missing policy`) — every new test must set
 it.
